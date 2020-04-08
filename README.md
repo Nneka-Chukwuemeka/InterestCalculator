@@ -1,0 +1,1 @@
+This is a code that calculates simple interest and evaluates the rate for different amount
