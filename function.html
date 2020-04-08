@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en"> 
+    <head>
+        <meta charset="UFT-8">
+        <title> Functions </title>   
+    </head>
+    <body>
+    <script>
+'use strict';
+const data = [
+               {
+               principal: 2500,
+               time: 1.8
+               },
+             {
+               principal: 1000,
+                time: 5
+              },
+              {
+              principal: 3000,
+              time: 1
+              },
+              {
+              principal: 2000,
+              time: 3
+              }
+             ]
+        function interestCalculator(info) {
+            let interestData = [];
+            for(let i=0; i<info.length; i++){
+                let principal = info[i].principal;
+                let time = info[i].time;
+                let rate;
+             if(
+                principal >= 2500 && time >1 || time <3)
+             {
+                 let rate = 3;
+                 let  interest = (principal * time * rate)/100;
+                let newData = {principal: principal, rate: rate, time: time, interest:interest};
+                interestData.push(newData);
+                 
+             }
+                else if(
+                 principal >= 2500 && time >=3) 
+             { 
+                 let rate = 4;
+                 let  interest = (principal * time * rate)/100;
+                let newData = {principal: principal, rate: rate, time: time, interest:interest};
+                interestData.push(newData);
+                 }
+                else if (
+                principal<2500 || time <= 1
+            )
+                {
+                    let rate = 2;
+                    let  interest = (principal * time * rate)/100;
+                let newData = {principal: principal, rate: rate, time: time, interest:interest};
+                interestData.push(newData);
+                }
+                else {
+                 let rate = 1;
+                    let  interest = (principal * time * rate)/100;
+                let newData = {principal: principal, rate: rate, time: time, interest:interest};
+                interestData.push(newData);
+                }
+              
+            }
+            console.log(interestData);
+            return interestData;
+          
+        }
+        interestCalculator(data);
+        
+</script>
+</body>
+</html>
